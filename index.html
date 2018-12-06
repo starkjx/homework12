@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>homework12</title>
+  <style>
+    .bubble{
+      position: relative;
+      margin-top: 30px;
+      padding: 5px;
+      width: 100px;
+      height:40px;
+      background-color: #fff;
+      border: 1px solid gray;
+      display: inline-block;
+    }
+    .bubble::before{
+      height: 0px;
+      width: 0px;
+      border-top: solid 10px transparent;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent;
+      border-bottom: solid 10px gray;
+      /* background-color: #fff; */
+      display: inline-block;
+      /* transform: rotateZ(45deg); */
+      position: absolute;
+      top: -20px;
+    }
+
+    .bubble::before{
+      content: '';
+    }
+
+    .style2::before{
+      border-bottom: solid 10px red;
+      transform: rotateZ(45deg);
+      left: 100px;
+      top: -10px;
+    }
+    .style3::before{
+      width: 10px;
+      height: 10px;
+      border: 0px;
+      border-left: 1px solid gray;
+      border-top: 1px solid gray;
+      background-color: #fff;
+      display: inline-block;
+      transform: rotateZ(45deg);
+      position: absolute;
+      top: -6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="bubble"></div>
+  <div class="bubble style2"></div>
+  <div class="bubble style3"></div>
+</body>
+</html>
